@@ -1,3 +1,4 @@
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/2c9a74f6471e46e3990c23d52662ec39)](https://www.codacy.com/app/gervais-b/stackexchange-codereview?utm_source=github.com&utm_medium=referral&utm_content=gervaisb/stackexchange-codereview&utm_campaign=badger)
 [![Code Quality](https://codeclimate.com/github/gervaisb/stackexchange-codereview/badges/gpa.svg)](https://codeclimate.com/github/gervaisb/stackexchange-codereview)
 
 # stackexchange-codereview
