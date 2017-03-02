@@ -23,6 +23,13 @@ Clone this repository then move to the local copy and build it with maven :
     cd stackexchange-codereview
     mvn compile  
 
+### Usage
+
+Each question is resolved in a dedicated branch :
+
++ [#153499, Receiving messages from TCP socket and processing them](https://github.com/gervaisb/stackexchange-codereview/tree/q153499)
++ [#154869, Quarantine implementation](https://github.com/gervaisb/stackexchange-codereview/tree/q154869)
++ [#156363, Simple java calculator](https://github.com/gervaisb/stackexchange-codereview/tree/q156363)
 
 ## License
 This project is licensed under the [MIT License](https://opensource.org/licenses/MIT),
