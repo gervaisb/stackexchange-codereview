@@ -7,17 +7,11 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 
-/**
- *
- */
 class Question {
-
     private final Element question;
     private final String id;
-
     public Question(String id) throws IOException {
-        this.question = //Jsoup.connect("http://codereview.stackexchange.com/q/"+id).get()
-            Jsoup.parse(new File("/home/bgervais/"+id+".html"), "utf-8")
+        this.question = Jsoup.connect("http://codereview.stackexchange.com/q/"+id).get()
             .select("#question div.post-text").first();
         this.id = id;
     }
