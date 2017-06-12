@@ -1,0 +1,7 @@
+enable
+conf t
+router ospf 1
+network 192.168.1.0 0.0.0.3 area 51
+network 192.168.1.8 0.0.0.3 area 51
+network 192.168.2.0 0.0.0.255 area 51
+end
