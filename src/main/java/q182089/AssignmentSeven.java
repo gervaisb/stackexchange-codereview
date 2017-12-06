@@ -6,19 +6,12 @@ import java.awt.event.*;
 import java.util.HashMap;
 
 
-public class AssignmentSeven extends Frame {
+public class AssignmentSeven {
     private JFrame container;
-    private JPanel mainPanel;
     private JLabel firstLabel;
-    private JComboBox<String> selectBloodType = new JComboBox<>();
 
     public AssignmentSeven() {
-        guione();
-    }
-
-    public void guione() {
         container = new JFrame("Blood compatibility  App");
-        setLayout(new FlowLayout());
 
         container.setVisible(true);
         container.setSize(300, 170);
@@ -26,8 +19,6 @@ public class AssignmentSeven extends Frame {
         container.setResizable(true);
         container.setLocationRelativeTo(null);
 
-        mainPanel = new JPanel();
-        mainPanel.setLayout(null);
         firstLabel = new JLabel("Please select your blood type : ");
         firstLabel.setBounds(25, 60, 250, 20);
         String[] bloodTypeArrayAppearance = {"O-", "O+ ", "A- ", "A+ ", "B- ", "B + ", "AB - ", "AB + "};
@@ -91,14 +82,9 @@ public class AssignmentSeven extends Frame {
             }
 
         });
-
-
-        mainPanel.add(selectBloodType);
         mainPanel.add(firstLabel);
         mainPanel.add(selectBloodType);
         container.add(mainPanel);
-
-
     }
 
     public static void main(String[] args) {
