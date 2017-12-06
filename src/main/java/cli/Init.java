@@ -12,10 +12,6 @@ public class Init {
             System.out.println("question id expected, see usage.");
         } else {
             new Question(args[0]).writeTo(new File("./target"));
-//            Document page = Jsoup.connect("http://codereview.stackexchange.com/q/"+id).get();
-//            Element element = page.select("#question div.post-text").first();
-
-
         }
     }
 }
