@@ -10,7 +10,10 @@ public class AssignmentSeven {
     private final JFrame container = new JFrame("Blood compatibility  App");
     private final JLabel usage = new JLabel("Please select your blood type : ");
 
-    public AssignmentSeven() {
+    private final BloodService service;
+
+    public AssignmentSeven(BloodService service) {
+        this.service = service;
 
         container.setSize(300, 170);
         container.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -19,27 +22,16 @@ public class AssignmentSeven {
 
         usage.setBounds(25, 60, 250, 20);
 
-        HashMap<String, String> hash = new LinkedHashMap<>();
-        hash.put("O-", "O-");
-        hash.put("O+", "O+, O-");
-        hash.put("A-", "O-, A-");
-        hash.put("A+", "O-, O+, A-, A+");
-        hash.put("B-", "O-, B- ");
-        hash.put("B+", "O-, O+, B-, B+");
-        hash.put("AB-", "O-, A-, B-, AB-");
-        hash.put("AB+", "O-, O+, A-, A+, B-, B+, AB-, AB+");
-
-        final JPanel mainPanel = new JPanel();
-
-        JComboBox<String> selectBloodType = new JComboBox(hash.keySet().toArray(new String[hash.size()]));
+        JPanel mainPanel = new JPanel();
+        JComboBox<String> selectBloodType = new JComboBox(service.getAllTypes().toArray());
         selectBloodType.addItemListener(e -> {
             if (e.getStateChange() != ItemEvent.SELECTED) {
                 return;
             }
-            String item = (String) e.getItem();
-            String compatibilities = hash.get(item);
+            String selected = (String) e.getItem();
+            String compatibilities = service.getCompatibility(selected);
             JOptionPane.showMessageDialog(null,
-                    item+ " is compatible with " + compatibilities,
+                    selected+ " is compatible with " + compatibilities,
                     "Blood type", JOptionPane.INFORMATION_MESSAGE);
 
         });
@@ -50,6 +42,6 @@ public class AssignmentSeven {
     }
 
     public static void main(String[] args) {
-        new AssignmentSeven();
+        new AssignmentSeven(new BloodService());
     }
 }
