@@ -1,5 +1,5 @@
 #!/bin/bash
-git checkout -b $1
+git checkout -b q$1
 mvn clean compile dependency:copy-dependencies
 rm -rf src
 mkdir -p src/main/java
