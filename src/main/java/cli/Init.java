@@ -11,7 +11,7 @@ public class Init {
         if ( args.length!=1 || !args[0].matches("\\d+")) {
             System.out.println("question id expected, see usage.");
         } else {
-            new Question(args[0]).writeTo(new File("./target"));
+            new Question(args[0]).writeTo(new File("./src/main/java"));
         }
     }
 }
