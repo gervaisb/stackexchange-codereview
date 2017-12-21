@@ -5,10 +5,6 @@ import java.util.Stack;
 
 class Q182084 {
 
-    public static void main(String[] args) {
-
-    }
-
     public static <E extends Comparable<E>> boolean isSorted(Stack<E> stack) {
         return isSorted(stack.iterator());
     }

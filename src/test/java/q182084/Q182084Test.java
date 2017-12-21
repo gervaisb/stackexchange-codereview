@@ -1,11 +1,11 @@
 package q182084;
 
-import org.junit.Assert;
 import org.junit.Test;
 
 import java.util.Stack;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
 
 public class Q182084Test {
