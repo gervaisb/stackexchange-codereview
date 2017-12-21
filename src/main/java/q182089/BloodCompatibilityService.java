@@ -2,8 +2,8 @@ package q182089;
 
 import java.util.*;
 
-class BloodService {
-    private static HashMap<String, String> COMPATIBILITY = new LinkedHashMap<>();
+class BloodCompatibilityService {
+    private static final HashMap<String, String> COMPATIBILITY = new LinkedHashMap<>();
     static {
         COMPATIBILITY.put("O-", "O-");
         COMPATIBILITY.put("O+", "O+, O-");

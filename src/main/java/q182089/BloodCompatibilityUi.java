@@ -2,17 +2,16 @@ package q182089;
 
 import javax.swing.*;
 import java.awt.event.*;
-import java.util.HashMap;
-import java.util.LinkedHashMap;
 
 
-public class AssignmentSeven {
+class BloodCompatibilityUi {
+
     private final JFrame container = new JFrame("Blood compatibility  App");
     private final JLabel usage = new JLabel("Please select your blood type : ");
 
-    private final BloodService service;
+    private final BloodCompatibilityService service;
 
-    public AssignmentSeven(BloodService service) {
+    public BloodCompatibilityUi(BloodCompatibilityService service) {
         this.service = service;
 
         container.setSize(300, 170);
@@ -41,7 +40,5 @@ public class AssignmentSeven {
         container.setVisible(true);
     }
 
-    public static void main(String[] args) {
-        new AssignmentSeven(new BloodService());
-    }
+
 }
