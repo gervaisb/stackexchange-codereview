@@ -20,14 +20,9 @@ public class Customer {
                 .sum();
     }
 
-    public void addAccount(double initialBalance) {
-        Account account = new Account();
+    public void addAccount(AccountNumber number, double initialBalance) {
+        Account account = new Account(number);
         account.deposit(initialBalance);
         accounts.add(account);
     }
-
-    public void addAccount() {
-        addAccount(100);
-    }
-
 }

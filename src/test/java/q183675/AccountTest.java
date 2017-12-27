@@ -8,13 +8,10 @@ import static org.junit.Assert.*;
 
 public class AccountTest {
 
-    private final Account target = new Account();
-
-
     @Test
     public void transfer_must_move_amount() {
-        Account michael = new Account();
-        Account max = new Account();
+        Account michael = new Account(new AccountNumber("12345678"));
+        Account max = new Account(new AccountNumber("12349876"));
 
         michael.transfer(15, max);
 

@@ -1,25 +1,28 @@
 package q183675;
 
 public class Account {
+//    static int nextId = 0;
+//    String accountId;
+//    String bankName;
+//    {
+//        if (ROUTING_NUMBER == 12345) {
+//            bankName = "USA Bank";
+//        } else {
+//            bankName = "Other bank";
+//        }
+//    }
 
-    double balance;
-    String accountId;
-    static int nextId = 0;
-    static final int ROUTING_NUMBER = 12345;
-    String bankName;
 
-    {
-        if (ROUTING_NUMBER == 12345) {
-            bankName = "USA Bank";
-        } else {
-            bankName = "Other bank";
-        }
+    private final AccountNumber number;
+    private double balance = 0.0;
+
+    public Account(AccountNumber number) {
+        this.number = number;
     }
 
     public void deposit(double amount) {
         balance = balance + amount;
     }
-
 
     public void withdraw(double amount) {
         balance = balance - amount;
@@ -30,19 +33,17 @@ public class Account {
     }
 
     public void transfer(double amount, Account recipient) {
-        double transferAmount = amount;
-        int routingNumber = recipient.ROUTING_NUMBER;
-            if (routingNumber == ROUTING_NUMBER) {
-                System.out.println("Your funds will transfer instantly, you and your recipient share the same bank!");
-                System.out.println("Bank name: " + bankName);
-            } else {
-                System.out.println("Your funds will transfer in 2-3 business days.");
-            }
-        this.balance -= transferAmount;
-        recipient.balance += transferAmount;
+        if (isSameBank(recipient)) {
+            System.out.println("Your funds will transfer instantly, you and your recipient share the same bank!");
+        } else {
+            System.out.println("Your funds will transfer in 2-3 business days.");
+        }
+        this.withdraw(amount);
+        recipient.deposit(amount);
     }
 
-    public static String getNextId() {
-        return "ACCT #" + nextId++;
+    private boolean isSameBank(Account recipient) {
+        return this.number.isSameBank(recipient.number);
     }
+
 }
