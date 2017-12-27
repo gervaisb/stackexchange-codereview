@@ -1,35 +1,33 @@
 package q183675;
 
+import java.util.HashSet;
+import java.util.Set;
+
 public class Customer {
 
-public String firstName;
-public String lastName;
-public Account acc;
-public double customerBalance = acc.balance;
-int defaultBalance = 100;
+    private Set<Account> accounts = new HashSet<>();
+    public String firstName;
+    public String lastName;
 
 
-public Customer(String firstName, String lastName) {
-    this.firstName = firstName;
-    this.lastName = lastName;
- }
+    public Customer(String firstName, String lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
 
+    public double getBalance() {
+        return accounts.stream().mapToDouble(Account::getBalance)
+                .sum();
+    }
 
-public Customer() {
-    firstName = "John";
-    lastName = "Doe";
- }
+    public void addAccount(double initialBalance) {
+        Account account = new Account();
+        account.deposit(initialBalance);
+        accounts.add(account);
+    }
 
-
-public void addAccount(double initialBalance) {
-    acc = new Account();
-    acc.accountId = "ACCT ID: " + Account.getNextId();
-    customerBalance = initialBalance;
- }
-
-
-public void addAccount() {
-    addAccount(100);
- }
+    public void addAccount() {
+        addAccount(100);
+    }
 
 }
