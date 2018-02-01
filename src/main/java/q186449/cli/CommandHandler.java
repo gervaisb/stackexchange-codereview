@@ -1,4 +1,4 @@
-package q186449;
+package q186449.cli;
 
 import java.lang.reflect.Method;
 

@@ -1,6 +1,7 @@
-package q186449;
+package q186449.cli;
 
 import org.junit.Test;
+import q186449.cli.CommandHandler;
 
 import static org.assertj.core.api.Assertions.*;
 

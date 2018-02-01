@@ -1,4 +1,4 @@
-package q186449;
+package q186449.business;
 
 public class Team {
 

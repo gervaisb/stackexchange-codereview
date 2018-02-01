@@ -1,4 +1,4 @@
-package q186449;
+package q186449.cli;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -17,7 +17,7 @@ import java.io.InputStreamReader;
  * @author IPD, SDQ Group
  * @version 5.03, 2016/05/07
  */
-public final class Terminal {
+final class Terminal {
 
     /**
      * Reads text from the "standard" input stream, buffering characters so as to provide for the efficient reading
