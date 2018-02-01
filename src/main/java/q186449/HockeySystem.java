@@ -35,22 +35,12 @@ public class HockeySystem {
      * "quit" Input : The program will be
      */
     public void method() {
-        String[] parts = Terminal.readLine().split(" ");
-        if (parts[0].startsWith("add-team")) {
-            addTeam(parts[1]);
-        }
-        if (parts[0].equals("list-team")) {
-            listTeam();
-        }
-        if (parts[0].equals("add-ice-hockey-match")) {
-            addIceHockeyMatch(parts[1]);
-        }
-        if (parts[0].equals("print-del-standings")) {
-        }
+        CommandHandler handler = new CommandHandler(this);
+        handler.handle(Terminal.readLine());
     }
 
-    private void addTeam(String part) {
-        String[] parts2 = part.split(";"); // parts2[0] will be the "ID" & parts 2[1] will be the "Teamname"
+    public void addTeam(String[] parameters) {
+        String[] parts2 = parameters[0].split(";"); // parts2[0] will be the "ID" & parts 2[1] will be the "Teamname"
         boolean hasBeenAdded = false;
         boolean hasNameError = false;
         boolean hasSameId = false;
@@ -93,7 +83,7 @@ public class HockeySystem {
         }
     }
 
-    private void listTeam() {
+    private void listTeam(String[] parameters) {
         for (int i = 0; i < teams.length; i++) {
             if (teams[i] != null) {
                 Terminal.printLine(teams[i].getId() + " " + teams[i].getTeamName());
@@ -101,8 +91,8 @@ public class HockeySystem {
         }
     }
 
-    private void addIceHockeyMatch(String part) {
-        String[] parts2 = part.split(";");
+    private void addIceHockeyMatch(String[] parameters) {
+        String[] parts2 = parameters[0].split(";");
         if (Integer.valueOf(parts2[4]) >= 60 && Integer.valueOf(parts2[4]) <= 120
                 && Integer.valueOf(parts2[1]) != Integer.valueOf(parts2[3])) {
             HockeyMatch hockeyMatch;
