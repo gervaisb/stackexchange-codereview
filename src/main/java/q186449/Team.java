@@ -6,8 +6,7 @@ public class Team {
     private String teamName;
 
     /**
-     * 
-     * @param id the Team consists of an ID & teamname
+     * @param id       the Team consists of an ID & teamname
      * @param teamName the Team consists of an ID & teamname
      */
     public Team(int id, String teamName) {
@@ -16,7 +15,6 @@ public class Team {
     }
 
     /**
-     * 
      * @return the Teamname of the Team.
      */
     public String getTeamName() {
@@ -24,15 +22,11 @@ public class Team {
     }
 
     /**
-     * 
      * @return the ID of the Team.
      */
     public int getId() {
         return id;
     }
-
-
-
 
 
 }
