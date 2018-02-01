@@ -1,6 +1,5 @@
 package q186449;
 
-import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
 class CommandHandler {
@@ -22,18 +21,20 @@ class CommandHandler {
         } catch (Exception e) {
             e.printStackTrace(); // Command execution failed
         }
-
     }
 
-
-
     private String readCommand(String line) {
-        return line.substring(0, line.indexOf(' '));
+        final int space = line.indexOf(' ');
+        return space>-1
+                ?line.substring(0, space)
+                :line;
     }
 
     private String[] readParameters(String line) {
-        String parameters = line.substring(line.indexOf(' ')+1, line.length());
-        return parameters.split( " ");
+        final int space = line.indexOf(' ');
+        return space>-1
+                ?line.substring(space+1, line.length()).split(" ")
+                :new String[0];
     }
 
     private Method findHandlerMethod(String command) throws NoSuchMethodException {

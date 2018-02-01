@@ -23,4 +23,23 @@ public class HockeyMatch {
         this.playTime = playTime;
     }
 
+    public int getId1() {
+        return id1;
+    }
+
+    public int getGoal1() {
+        return goal1;
+    }
+
+    public int getId2() {
+        return id2;
+    }
+
+    public int getGoal2() {
+        return goal2;
+    }
+
+    public int getPlayTime() {
+        return playTime;
+    }
 }
