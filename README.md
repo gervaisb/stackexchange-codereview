@@ -11,15 +11,21 @@ on [codereview.stackexchange.com](http://codereview.stackexchange.com/questions/
 This is a simple maven project compiled with Java 8. All questions are resolved 
 in a dedicated branch   :
 
-+ [#153499, Receiving messages from TCP socket and processing them](https://github.com/gervaisb/stackexchange-codereview/tree/q153499)
-+ [#154869, Quarantine implementation](https://github.com/gervaisb/stackexchange-codereview/tree/q154869)
-+ [#156363, Simple java calculator](https://github.com/gervaisb/stackexchange-codereview/tree/q156363)
-+ [#165402, Cisco router configuration script generator in Java](https://github.com/gervaisb/stackexchange-codereview/tree/q165402)
-+ [#165736, Checking number of words in a string and assigning them to a value](https://github.com/gervaisb/stackexchange-codereview/tree/165736)
-+ [#175332, Splitting URL query string to key-value pairs](https://github.com/gervaisb/stackexchange-codereview/tree/q175332)
-+ [#182084, Checking if a Stack is sorted in ascending order](https://github.com/gervaisb/stackexchange-codereview/tree/q182084)
-+ [#182089, Blood type compatibility GUI](https://github.com/gervaisb/stackexchange-codereview/tree/q182089)
-+ [#183272, Given a list containing dates and the amount spent on each date, display the total amount spent per month](https://github.com/gervaisb/stackexchange-codereview/tree/q183272)
++ [#153499, Receiving messages from TCP socket and processing them](https://github.com/gervaisb/stackexchange-codereview/tree/master/src/main/java/q153499)
++ [#154869, Quarantine implementation](https://github.com/gervaisb/stackexchange-codereview/tree/master/src/main/java/q154869)
++ [#156363, Simple java calculator](https://github.com/gervaisb/stackexchange-codereview/tree/master/src/main/java/q156363)
++ [#165402, Cisco router configuration script generator in Java](https://github.com/gervaisb/stackexchange-codereview/tree/master/src/main/java/q165402)
++ [#165736, Checking number of words in a string and assigning them to a value](https://github.com/gervaisb/stackexchange-codereview/tree/master/src/main/java/165736)
++ [#175332, Splitting URL query string to key-value pairs](https://github.com/gervaisb/stackexchange-codereview/tree/master/src/main/java/q175332)
++ [#182084, Checking if a Stack is sorted in ascending order](https://github.com/gervaisb/stackexchange-codereview/tree/master/src/main/java/q182084)
++ [#182089, Blood type compatibility GUI](https://github.com/gervaisb/stackexchange-codereview/tree/master/src/main/java/q182089)
++ [#183272, Given a list containing dates and the amount spent on each date, display the total amount spent per month](https://github.com/gervaisb/stackexchange-codereview/tree/master/src/main/java/q183272)
++ [#183675, Basic Java bank account](https://github.com/gervaisb/stackexchange-codereview/tree/master/src/main/java/q183675)
++ [#184229, Reversing the words order of a string](https://github.com/gervaisb/stackexchange-codereview/tree/master/src/main/java/184229)
++ [#186449, Method to process commands for managing a hockey league](https://github.com/gervaisb/stackexchange-codereview/tree/master/src/main/java/186449)
++ [#188306, Mini bank application](https://github.com/gervaisb/stackexchange-codereview/tree/master/src/main/java/188306)
++ [#192870, Creating user accounts](https://github.com/gervaisb/stackexchange-codereview/tree/master/src/main/java/192870)
+
 
 ### Prerequisites
 
