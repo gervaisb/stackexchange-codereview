@@ -1,9 +1,12 @@
 package q188306;
 
 import nl.jqno.equalsverifier.EqualsVerifier;
+import org.assertj.core.api.Assertions;
 import org.junit.Test;
 
 import java.util.stream.IntStream;
+
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class AccountIdTest {
 
