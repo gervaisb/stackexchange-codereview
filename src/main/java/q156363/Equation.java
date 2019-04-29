@@ -6,7 +6,7 @@ import java.util.function.Function;
 /**
  * A accumulation of operations that are stacked until the closing number to be executed.
  */
-public class Equation {
+class Equation {
 
     private final Stack<Function<Integer, Integer>> operations = new Stack<>();
 

@@ -1,18 +1,17 @@
 package q153499;
 
-import com.sun.istack.internal.NotNull;
 
 import java.util.concurrent.atomic.AtomicLong;
 
 public class Message {
-    private static AtomicLong SEQUENCE = new AtomicLong(0);
-    private static String CLOSURE = "OKBYE";
+    private static final AtomicLong SEQUENCE = new AtomicLong(0);
+    private static final String CLOSURE = "OKBYE";
 
     private final long counter = SEQUENCE.incrementAndGet();
     private final long time = System.nanoTime();
     private final String line;
 
-    public Message(@NotNull String line) {
+    public Message(String line) {
         this.line = line;
     }
 

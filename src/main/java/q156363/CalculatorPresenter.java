@@ -1,9 +1,6 @@
 package q156363;
 
-/**
- *
- */
-public class CalculatorPresenter {
+class CalculatorPresenter {
 
     private final CalculatorView view;
     private Equation equation;

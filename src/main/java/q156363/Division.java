@@ -1,9 +1,6 @@
 package q156363;
 
-/**
- *
- */
-public class Division extends Operation {
+class Division extends Operation {
 
     public Division(Integer left) {
         super(left);

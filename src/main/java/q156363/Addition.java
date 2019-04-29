@@ -1,9 +1,6 @@
 package q156363;
 
-/**
- *
- */
-public class Addition extends Operation {
+class Addition extends Operation {
 
     public Addition(Integer left) {
         super(left);

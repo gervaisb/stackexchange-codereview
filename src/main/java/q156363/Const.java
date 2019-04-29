@@ -2,10 +2,7 @@ package q156363;
 
 import java.util.function.Function;
 
-/**
- *
- */
-public class Const implements Function<Integer, Integer> {
+class Const implements Function<Integer, Integer> {
     private final Integer value;
 
     public Const(Integer value) {

@@ -86,7 +86,7 @@ and resolve your equation.
 And that's all. To reset you just have to create a new `Equation` from your
 presenter. (as bonus it solve your `1 - 2 = 1` bug)
  */
-public class Q156363 {
+class Q156363 {
     public static void main(String[] args) {
         CalculatorFrame view = new CalculatorFrame();
         new CalculatorPresenter(view);
